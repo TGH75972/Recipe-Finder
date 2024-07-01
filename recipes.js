@@ -22,5 +22,45 @@ const recipes = [
         category: "Salad",
         image: "images/caesar_salad.jpg",
         instructions: "Chop lettuce. Add dressing, croutons, cheese, and chicken. Toss well. Serve chilled."
+    },
+    {
+        id: 4,
+        name: "Chocolate Cake",
+        ingredients: ["Flour", "Sugar", "Cocoa powder", "Eggs", "Butter", "Baking powder"],
+        category: "Dessert",
+        image: "images/chocolate_cake.jpg",
+        instructions: "Mix flour, sugar, cocoa powder, and baking powder. Add eggs and melted butter. Bake in a preheated oven at 350°F for 30 minutes. Let cool before serving."
+    },
+    {
+        id: 5,
+        name: "Pancakes",
+        ingredients: ["Flour", "Milk", "Eggs", "Butter", "Sugar", "Baking powder"],
+        category: "Breakfast",
+        image: "images/pancakes.jpg",
+        instructions: "Mix flour, sugar, and baking powder. Add milk and eggs. Melt butter in a pan and pour batter. Cook until bubbles form, then flip. Serve with syrup."
+    },
+    {
+        id: 6,
+        name: "Margherita Pizza",
+        ingredients: ["Pizza dough", "Tomato sauce", "Mozzarella cheese", "Basil", "Olive oil"],
+        category: "Italian",
+        image: "images/margherita_pizza.jpg",
+        instructions: "Spread tomato sauce on dough. Add mozzarella cheese and basil leaves. Drizzle with olive oil. Bake in a preheated oven at 475°F for 10-12 minutes."
+    },
+    {
+        id: 7,
+        name: "Butter Chicken",
+        ingredients: ["Chicken", "Butter", "Tomato puree", "Cream", "Spices"],
+        category: "Indian",
+        image: "images/butter_chicken.jpg",
+        instructions: "Cook chicken with spices. Add butter and tomato puree. Simmer until thickened. Stir in cream and serve with naan."
+    },
+    {
+        id: 8,
+        name: "Greek Salad",
+        ingredients: ["Cucumber", "Tomatoes", "Feta cheese", "Olives", "Red onion", "Olive oil"],
+        category: "Salad",
+        image: "images/greek_salad.jpg",
+        instructions: "Chop cucumber, tomatoes, and red onion. Add feta cheese and olives. Drizzle with olive oil and toss. Serve fresh."
     }
 ];
