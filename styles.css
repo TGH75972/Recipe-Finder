@@ -85,3 +85,8 @@ main {
 #searchButton {
     border-radius: 5px;
 }
+
+#t1{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
