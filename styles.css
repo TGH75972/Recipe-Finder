@@ -1,0 +1,87 @@
+body {
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    border-radius: 13px ;
+    background-image: url('images/doodle.png'); 
+    background-size: cover;
+    background-position: center;
+    border: 1px solid white;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav input, nav button, nav select {
+    margin-left: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+#recipes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.recipe {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.recipe img {
+    max-width: 100%;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.recipe img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .recipe {
+        width: 100%;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a, nav input, nav button, nav select {
+        margin: 5px 0;
+    }
+}
+
+#searchQuery {
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#categoryFilter {
+    border-radius: 5px;
+}
+
+#searchButton {
+    border-radius: 5px;
+}
