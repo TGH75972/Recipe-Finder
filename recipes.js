@@ -62,5 +62,21 @@ const recipes = [
         category: "Salad",
         image: "images/greek_salad.jpg",
         instructions: "Chop cucumber, tomatoes, and red onion. Add feta cheese and olives. Drizzle with olive oil and toss. Serve fresh."
+    },
+    {
+        id: 9,
+        name: "Lasagna",
+        ingredients: ["Lasagna noodles", "Ground beef", "Tomato sauce", "Ricotta cheese", "Mozzarella cheese", "Parmesan cheese"],
+        category: "Italian",
+        image: "images/lasagna.jpg",
+        instructions: "Cook lasagna noodles. Brown ground beef and add tomato sauce. Layer noodles, ricotta cheese, beef mixture, and mozzarella cheese in a baking dish. Repeat layers and top with Parmesan cheese. Bake at 375°F for 45 minutes."
+    },
+    {
+        id: 10,
+        name: "Tiramisu",
+        ingredients: ["Ladyfingers", "Mascarpone cheese", "Eggs", "Sugar", "Coffee", "Cocoa powder"],
+        category: "Dessert",
+        image: "images/tiramisu.jpg",
+        instructions: "Dip ladyfingers in coffee. Layer in a dish with a mixture of mascarpone cheese, eggs, and sugar. Repeat layers and top with cocoa powder. Refrigerate for at least 4 hours before serving."
     }
 ];
