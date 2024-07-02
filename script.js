@@ -1,16 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const recipesSection = document.getElementById('recipes');
-    recipes.forEach(recipe => {
-        const recipeDiv = document.createElement('div');
-        recipeDiv.classList.add('recipe');
-        recipeDiv.innerHTML = `
-            <img src="${recipe.image}" alt="${recipe.name}">
-            <h3>${recipe.name}</h3>
-            <p>Ingredients: ${recipe.ingredients.join(', ')}</p>
-            <p>Instructions: ${recipe.instructions}</p>
-        `;
-        recipesSection.appendChild(recipeDiv);
-    });
+    displayRecipes(recipes);
 });
 
 document.getElementById('searchButton').addEventListener('click', () => {
@@ -25,18 +14,31 @@ document.getElementById('categoryFilter').addEventListener('change', () => {
     displayRecipes(filteredRecipes);
 });
 
+document.getElementById('emojiButton').addEventListener('click', () => {
+    console.log('Emoji button clicked!');
+});
+
 function displayRecipes(filteredRecipes) {
     const recipesSection = document.getElementById('recipes');
+    const mainMessage = document.getElementById('mainMessage');
     recipesSection.innerHTML = '';
-    filteredRecipes.forEach(recipe => {
-        const recipeDiv = document.createElement('div');
-        recipeDiv.classList.add('recipe');
-        recipeDiv.innerHTML = `
-            <img src="${recipe.image}" alt="${recipe.name}">
-            <h3>${recipe.name}</h3>
-            <p>Ingredients: ${recipe.ingredients.join(', ')}</p>
-            <p>Instructions: ${recipe.instructions}</p>
-        `;
-        recipesSection.appendChild(recipeDiv);
-    });
+
+    if (filteredRecipes.length === 0) {
+        mainMessage.textContent = 'No Recipes Found :(';
+    } else {
+        mainMessage.textContent = 'Find your favorite recipes easily.';
+        filteredRecipes.forEach(recipe => {
+            const recipeDiv = document.createElement('div');
+            recipeDiv.classList.add('recipe');
+            recipeDiv.innerHTML = `
+                <img src="${recipe.image}" alt="${recipe.name}">
+                <h3>${recipe.name}</h3>
+                <p class="ingredients">Ingredients: ${recipe.ingredients.join(', ')}</p>
+                <div class="instructions-box">
+                    <p class="instructions">${recipe.instructions}</p>
+                </div>
+            `;
+            recipesSection.appendChild(recipeDiv);
+        });
+    }
 }
