@@ -15,8 +15,19 @@ document.getElementById('categoryFilter').addEventListener('change', () => {
 });
 
 document.getElementById('emojiButton').addEventListener('click', () => {
-    console.log('Emoji button clicked!');
+    window.location.href = 'cookbook.html';
 });
+
+function addRecipeToCookbook(recipe) {
+    let cookbook = JSON.parse(localStorage.getItem('cookbook')) || [];
+    
+    if (!cookbook.some(existingRecipe => existingRecipe.id === recipe.id)) {
+        cookbook.push(recipe);
+        localStorage.setItem('cookbook', JSON.stringify(cookbook));
+    } else {
+        alert('This recipe is already in the cookbook!');
+    }
+}
 
 function displayRecipes(filteredRecipes) {
     const recipesSection = document.getElementById('recipes');
@@ -37,8 +48,12 @@ function displayRecipes(filteredRecipes) {
                 <div class="instructions-box">
                     <p class="instructions">${recipe.instructions}</p>
                 </div>
+                <button class="fryingPanButton">🍳</button>
             `;
             recipesSection.appendChild(recipeDiv);
+
+            const fryingPanButton = recipeDiv.querySelector('.fryingPanButton');
+            fryingPanButton.addEventListener('click', () => addRecipeToCookbook(recipe));
         });
     }
 }
