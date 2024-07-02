@@ -74,15 +74,18 @@ main {
 }
 
 #emojiButton {
-    background-color: cadetblue;
-    position: absolute;
-    top: 50px;
-    left: 1250px;
     border-radius: 5px;
     padding: 5px 10px;
-    border: 2px solid black;
     font-size: 20px;
     cursor: pointer;
+}
+
+.fryingPanButton {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 @media (max-width: 600px) {
